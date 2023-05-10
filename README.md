@@ -1,5 +1,5 @@
 # 🐑 Guarded Sheep 🐑 
-Search GitHub repos for possible company or indivudal source code &amp; intellectual property theft 
+Guarded Sheep is a small utility to help discover potential intellectual property or leaked source code on GitHub using GitHub's public APIs. 
 
 # Features 
 
