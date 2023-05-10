@@ -1,7 +1,7 @@
-# guarded-sheep
+# 🐑 Guarded Sheep 🐑 
 Search GitHub repos for possible company or indivudal source code &amp; intellectual property theft 
 
-# Features
+# Features 
 
 ### To Do
 - [ ] Search GitHub repos based on a series of key terms and criteria
