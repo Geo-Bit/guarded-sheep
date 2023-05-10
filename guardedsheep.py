@@ -9,7 +9,6 @@ g = Github(ACCESS_TOKEN)
 
 def searchCode(query):
     results = []
-    findings = {}
     code_results = g.search_code(query=query)
     for content_file in code_results:
         results.append({"name":content_file.name,"repo":content_file.repository.url})
@@ -21,6 +20,11 @@ def searchRepos(query):
 
 def searchUsers(query):
     results = []
+    findings = {}
+    user_results = g.search_users(query=query)
+    for user in user_results:
+        if user.get_repos().totalCount > 0:
+            results.append({"user":user})
     return results
 
 def main():    
@@ -29,7 +33,7 @@ def main():
 
     # Get repo info based on query
     code_findings = searchCode(config_data['code_query'])
-    print(code_findings)
+    user_findings = searchUsers(config_data['user_query'])
 
 if __name__ == "__main__":
     main()
